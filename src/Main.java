@@ -1,28 +1,20 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-import java.util.Locale;
-
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in).useLocale(Locale.US);
 
-        double[] notas = new double[6];
-        double soma = 0;
+        int[] numeros = {1,3,5,7,9};
+        boolean temPar = false;
 
-        for(int i = 0; i < 6; i++) {
-            System.out.println("Digite as notas : " + (i+1) + " :");
-            notas[i] = sc.nextDouble();
-            soma += notas[i];
+        System.out.println("Numeros pares na lista: ");
+
+        for (int numero : numeros) {
+            if (numero % 2 == 0) {
+                System.out.println("Numero: " + numero);
+                temPar = true;
+            }
         }
-        double media = soma / 6;
-        if(media >= 6) {
-            System.out.println("aprovado");
-        } else {
-            System.out.println("reprovado");
+        if (!temPar){
+            System.out.println("Nao ha numeros pares na lista.");
         }
     }
 }
